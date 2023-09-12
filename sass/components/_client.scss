@@ -1,0 +1,11 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.our_client {
+  padding-top: 80px;
+
+  .client_slider_item {
+    padding: 30px;
+    margin: 0 12px;
+  }
+}

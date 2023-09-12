@@ -1,0 +1,59 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.feature {
+  padding-top: 80px;
+
+  .feature_slider {
+    box-shadow: 0 4px 8px rgba(10, 9, 9, .2);
+    border-radius: 10px;
+    overflow: hidden;
+
+    .slider_item {
+
+      .image {
+        width: 35%;
+      }
+
+      .text {
+        width: 65%;
+        padding: 16px;
+
+        p {
+          color: $black;
+          @include font(18px, 300);
+          padding-bottom: 10px
+        }
+
+        h4 {
+          @include font(22px, 400);
+          line-height: 32px;
+        }
+      }
+    }
+    .slick-dots{
+      text-align: right;
+      position: absolute;
+      bottom: 10px;
+      right: 24px;
+      li{
+        display: inline-block;
+        button{
+          font-size: 0;
+          width: 4px;
+          height: 4px;
+          background-color: $primary;
+          border-radius: 50%;
+          border: 0;
+          margin-left: 5px;
+          opacity: .4;
+        }
+      }
+      .slick-active{
+        button{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

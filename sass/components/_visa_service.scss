@@ -1,0 +1,31 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.visa_service {
+  padding-top: 80px;
+
+  .common_title {
+    margin-bottom: 0;
+    color: $primary;
+  }
+
+  .visa_service_item {
+    .image {
+      position: relative;
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 14px 14px;
+        background-color: rgba(0, 173, 239, 0.3);
+        width: 100%;
+        text-align: center;
+        h5{
+          @include font(22px, 500);
+        }
+      }
+    }
+  }
+}

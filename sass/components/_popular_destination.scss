@@ -1,0 +1,91 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.popular_destination {
+  padding-top: 80px;
+
+  .big_destination {
+    margin-bottom: 15px;
+
+    .image {
+      overflow: hidden;
+      border-radius: 14px;
+
+      img {
+        transition: all 1s ease 0s;
+      }
+
+      .text {
+        bottom: 40px;
+        left: 40px;
+
+        span {
+          color: $white;
+          font-size: 18px;
+        }
+
+        h3 {
+          @include font(38px, 600);
+          color: $white;
+          margin: 4px 0 8px 0;
+        }
+
+        h5 {
+          color: $primary;
+          color: $white;
+          font-size: 22px;
+
+          small {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.destination_item {
+
+  .image {
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      transition: all 0.4s ease 0s;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .text {
+    margin-top: 10px;
+
+    span {
+      color: #4c4c4c;
+      font-size: 14px;
+    }
+
+    h3 {
+      @include font(24px, 500);
+      margin: 4px 0 8px 0;
+    }
+
+    h5 {
+      color: $primary;
+
+      small {
+        font-size: 15px;
+      }
+    }
+  }
+}

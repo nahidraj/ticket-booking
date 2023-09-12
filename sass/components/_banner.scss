@@ -1,0 +1,563 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.banner {
+  background-color: #F7F7F7;
+  padding-bottom: 60px;
+
+  .search_panel {
+    border-radius: 10px;
+    min-height: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .11);
+    margin-top: -440px;
+    position: relative;
+    z-index: 9;
+
+    .top_tabs_menu {
+      overflow: hidden;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+      .nav-pills {
+        border-bottom: 1px solid #c0c0c0;
+      }
+
+      .nav-item {
+        width: 25%;
+      }
+
+      .nav-link {
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
+        color: $black;
+        border-radius: 0;
+        padding: 14px 14px;
+        @include font(16px, 500);
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .nav-link.active {
+        background-color: $secondary;
+      }
+    }
+
+    .menu_wise_information {
+      padding: 30px;
+      padding-top: 0;
+    }
+
+    .sub_menu_tabs {
+      background-color: $white;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .17);
+      width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 80px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      .nav-pills {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-link {
+        border-radius: 0;
+        @include font(16px, 500);
+        color: $black;
+        padding: 12px 36px;
+      }
+
+      .nav-link.active {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .search-group {
+    margin-bottom: 0;
+    position: relative;
+    height: 100%;
+  }
+
+  .b-label {
+    position: absolute;
+    top: 13px;
+    left: 25px;
+    color: #4c4c4c;
+    font-size: .75rem;
+    z-index: 1;
+  }
+
+  .search-group input {
+    min-height: 88px;
+    border: 1px solid #d1d1d1;
+    background-color: #fafafa !important;
+    padding: 32px 25px;
+    font-weight: 600;
+    border-radius: 0px;
+    color: $black !important;
+    font-size: 1.125rem;
+    width: 100%;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .search-group .details {
+    font-size: 13px;
+    color: $black;
+    position: absolute;
+    bottom: 13px;
+    left: 25px;
+
+    span {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .menu.flight {
+    margin-top: 0;
+    background: #fff;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .17);
+    max-height: 355px;
+    width: 100%;
+    left: 0px;
+    overflow-y: auto;
+  }
+
+  .menu .item-element {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 12px;
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    color: #000;
+    transition: all linear .2s;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+
+    .text {
+      small {
+        display: inline;
+      }
+    }
+  }
+
+  .menu .item-element .text strong {
+    margin-right: 12px;
+  }
+
+  .search-group .TravellerCalulate {
+    min-height: 93px;
+    align-items: flex-start;
+    background-color: #fafafa;
+    border-color: #e2e2e8;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid #c7c7cc;
+    padding: 32px 23px;
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+  }
+  .search-group .PassengerCalulate {
+    min-height: 93px;
+    align-items: flex-start;
+    background-color: #fafafa;
+    border-color: #e2e2e8;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid #c7c7cc;
+    padding: 32px 23px;
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+  }
+
+  .submit__btn {
+    text-transform: capitalize;
+    @include font(17px, 600);
+    background-color: #ef7e46;
+    border: 0;
+    color: $white;
+    border-radius: 4px;
+    padding: 10px 40px;
+  }
+
+  .TravellerCalulateDetails {
+    background-color: $white;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .17);
+    z-index: 99;
+    width: 360px;
+    left: 0;
+    top: calc(100% - -1px);
+    border-radius: 5px;
+    padding: 14px;
+    cursor: auto;
+    opacity: 0;
+    transition: all linear .2s;
+    transform: scale(0);
+    transform-origin: top;
+
+    .calculate_info {
+      border-bottom: 1px solid #c0c0c0;
+
+      .title {
+        margin-bottom: 14px;
+
+        h6 {
+          @include font(15px, 400);
+        }
+
+        button {
+          background-color: transparent;
+          border: 0;
+          font-size: 14px;
+        }
+      }
+
+      .passengers_type {
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+
+        .number {
+          @include font(22px, 600);
+          margin-right: 20px;
+        }
+
+        .info {
+          max-width: 217px;
+          width: 100%;
+
+          p {
+            line-height: 18px
+          }
+
+          small {
+            @include font(12px, 400);
+          }
+        }
+
+        .button_set {
+          button {
+            width: 37px;
+            height: 37px;
+            border: 1px solid $primary;
+            text-align: center;
+            line-height: 37px;
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 12px;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .child_datepicker_wrapper {
+      width: 48%;
+      height: 40px;
+      margin-bottom: 30px;
+
+      .input-groups {
+        position: relative;
+      }
+
+      small {
+        font-size: 12px;
+        position: absolute;
+        top: -8px;
+        line-height: 14px;
+        left: 8px;
+        background-color: #fff;
+        padding: 1px 4px;
+        display: inline-block;
+      }
+
+      input {
+        min-height: unset;
+        border: 1px solid #a5a5a5;
+        background-color: unset !important;
+        padding: unset;
+        font-weight: unset;
+        border-radius: 4px;
+        color: #000000 !important;
+        font-size: 17px;
+        padding: 11px 5px;
+      }
+    }
+
+    .cabin_class {
+      padding-top: 14px;
+
+      h5 {
+        @include font(16px, 600);
+        margin-bottom: 10px;
+      }
+
+      ul {
+        li {
+          button {
+            background-color: transparent;
+            width: 100%;
+            @include font(15px, 500);
+            text-align: left;
+            border: 0;
+            line-height: 32px;
+            padding: 3px 10px;
+
+            &:hover {
+              background-color: #f2f2f2;
+            }
+
+            i {
+              font-size: 12px;
+            }
+          }
+        }
+
+        li.active {
+          button {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .menu .item-element .icon {
+    min-width: 24px;
+    width: 30px;
+
+    i {
+      color: $primary;
+    }
+  }
+
+  .menu.hotel {
+    .item-element {
+      &:hover {
+        i {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .ShowTravellerCalulateDetails {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+
+  .add_city_layout {
+    button {
+      background-color: rgba(0, 123, 172, 0.1);
+      border: 1px solid $primary;
+      color: $primary;
+      @include font(15px, 500);
+      padding: 12px 20px;
+      border-radius: 30px;
+      min-width: 130px;
+      text-align: center;
+
+      i {
+        margin-right: 7px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .remove_city_layout {
+    button {
+      background-color: rgba(255, 0, 0, 0.1);
+      border: 1px solid red;
+      color: red;
+      @include font(15px, 500);
+      padding: 12px 20px;
+      border-radius: 30px;
+      min-width: 130px;
+      text-align: center;
+
+      i {
+        margin-right: 7px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .ServicePassengersSelect {
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.17);
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 1px);
+    border-radius: 0;
+    padding: 14px;
+    cursor: auto;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    transition: all linear 0.2s;
+  }
+
+  .Show-ServicePassengersSelect{
+    opacity: 1;
+    transform: scale(1);
+  }
+  .ServicePassengersSelect {
+    .guest_icon_info {
+      display: flex;
+
+      .icon {
+        font-size: 22px;
+        margin-right: 14px;
+      }
+
+      .text-field {
+        span {
+          color: #7c7c7c;
+        }
+
+        h4 {
+          @include font(24px, 600);
+        }
+      }
+    }
+
+    .head_info {
+      margin: 10px 0;
+      background-color: #efeff4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      min-width: 100%;
+      flex-grow: 1;
+      flex-basis: fill;
+
+      select {
+        color: red;
+        font-size: 14px;
+        border-radius: 0;
+        border: 1px solid $black;
+        padding: 4px 8px;
+      }
+    }
+
+    .block-wrapper {
+      width: 48%;
+
+      .block {
+        padding: 10px 10px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #c7c7c7;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+
+        .mdi {
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .icon-input-block {
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+
+  .banner_btm_info {
+    padding-top: 70px;
+
+    .icon {
+      margin-right: 24px;
+
+      i {
+        width: 60px;
+        height: 60px;
+        background-color: $primary;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 50%;
+        color: $white;
+        font-size: 22px;
+      }
+    }
+
+    .text {
+      h4 {
+        @include font(22px, 600);
+        margin-bottom: 8px;
+      }
+
+      .more-info {
+        background-color: $primary;
+        color: $white;
+        @include font(15px, 500);
+        border-radius: 3px;
+        padding: 0px 20px;
+        line-height: 38px;
+        border: 0;
+        height: 38px;
+        transition: .2s;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+        &:hover {
+          background-color: #007bac;
+        }
+      }
+
+      .input-groups {
+        width: 100%;
+
+        input {
+          height: 40px;
+          border-radius: 3px;
+          border: 1px solid #ddd;
+          background-color: $white;
+          padding: 0 14px;
+          width: 266px;
+
+          &:focus {
+            border-color: $black;
+          }
+        }
+
+      }
+
+      .submit_btn {
+        margin-left: 5px;
+      }
+    }
+  }
+}

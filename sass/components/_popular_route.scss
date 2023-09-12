@@ -1,0 +1,51 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.popular_route {
+  padding-top: 80px;
+}
+
+.popular_route_item {
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all linear .2s;
+
+  .left_icon {
+    color: $primary;
+  }
+
+  .text {
+    width: 205px;
+
+    h4 {
+      @include font(20px, 600);
+    }
+
+    h5 {
+      margin-top: 5px;
+      @include font(18px, 500);
+
+      small {
+        @include font(15px, 400);
+      }
+    }
+
+  }
+
+  .right_icon {
+    color: $primary;
+    font-size: 14px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    .text {
+      h4 {
+        color: $primary;
+      }
+    }
+  }
+}

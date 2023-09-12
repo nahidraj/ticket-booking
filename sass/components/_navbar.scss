@@ -1,0 +1,47 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  padding: 0 !important;
+}
+
+
+nav {
+  .navbar-nav {
+    width: 100%;
+    .nav-item {
+      .nav-link {
+        @include font(19px, 500);
+        color: $black;
+        margin: 0 24px;
+      }
+
+      .navbar_logo {
+        margin: 0 50px;
+      }
+
+      .login_btn {
+        border: 2px solid $primary;
+        padding: 8px 50px;
+        border-radius: 30px;
+        @include font(20px, 400);
+        color: $primary;
+        transition: all linear .2s;
+        &:hover{
+          background-color: $primary;
+          color: $white;
+        }
+      }
+      &:first-child{
+        .nav-link{
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

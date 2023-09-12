@@ -1,0 +1,10 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.sister_concern{
+  padding-top: 80px;
+  .sister_concern_item{
+    padding: 30px;
+    margin: 0 12px;
+  }
+}

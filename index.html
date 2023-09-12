@@ -1,0 +1,2833 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+  <title>Ticket Booking</title>
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawsome/css/all.min.css">
+  <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+
+  <!-- navbar part start -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex justify-content-end mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Latest News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="navbar_logo"><img src="images/logo.png" alt="logo" width="140"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Visa Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="login_btn">Log in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar part end -->
+
+  <!-- banner part start -->
+  <section class="banner">
+    <div class="banner_image">
+      <img src="images/banner.webp" alt="banner" class="img-fluid w-100">
+    </div>
+    <div class="container">
+      <div class="search_panel">
+        <div class="top_tabs_menu">
+          <ul class="nav nav-pills mb-3" id="top-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                  class="fas fa-fighter-jet"></i> AIR TICKET</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-home"></i>
+                VISA PROCESSING</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i
+                  class="fas fa-hotel"></i> HOTEL BOOKING</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-serve-tab" data-bs-toggle="pill" data-bs-target="#pills-serve"
+                type="button" role="tab" aria-controls="pills-serve" aria-selected="false"><i
+                  class="fas fa-box-open"></i> TOUR PACKAGE</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu_wise_information">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="sub_menu_tabs">
+                <ul class="nav nav-pills" id="sub-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="sub-home-tab" data-bs-toggle="pill" data-bs-target="#sub-home"
+                      type="button" role="tab" aria-controls="sub-home" aria-selected="true">One Way</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sub-profile-tab" data-bs-toggle="pill" data-bs-target="#sub-profile"
+                      type="button" role="tab" aria-controls="sub-profile" aria-selected="false">Round Trip</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sub-contact-tab" data-bs-toggle="pill" data-bs-target="#sub-contact"
+                      type="button" role="tab" aria-controls="sub-contact" aria-selected="false">Multi-City</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="sub_menu_tabs_information">
+                <div class="tab-content" id="sub-tabsContent">
+                  <div class="tab-pane fade show active" id="sub-home" role="tabpanel" aria-labelledby="sub-home-tab">
+                    <div class="inner_tab_information">
+                      <form action="#">
+                        <div class="row g-3">
+                          <div class="col-lg-6">
+                            <div class="row g-0">
+                              <div class="col-lg-6">
+                                <div class="icon-input-block search-group">
+                                  <div class="text-field">
+                                    <span class="b-label">Flying from</span>
+                                    <div class="position-relative">
+                                      <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                        value="Dhaka" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                        <div class="item">
+                                          <div class="item-element item-highlighted">
+                                            <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                                International Airport (DAC)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                                (DAX)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                                Regional Airport (SLK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                                International Airport (CGP)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                                Bose International Airport (CCU)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                                (CXB)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                                (BKK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                                International Airport (LKO)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                                International Airport (ZYL)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                                (SPD)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                                (JSR)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                                (BANGKOK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                                International Airport (DPS)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                                International Airport (KUL)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                                Airport (SIN)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                                International Airport (DMK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                                (HAQ)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                                Airport (RJH)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                                (SGI)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                                Sulaiman Airport (BPN)</small></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <span class="details">
+                                      <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                        International Airport (DAC)</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="icon-input-block search-group">
+                                  <div class="text-field">
+                                    <span class="b-label">Flying to</span>
+                                    <div class="position-relative">
+                                      <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                        value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                        <div class="item">
+                                          <div class="item-element item-highlighted">
+                                            <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                                International Airport (DAC)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                                (DAX)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                                Regional Airport (SLK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                                International Airport (CGP)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                                Bose International Airport (CCU)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                                (CXB)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                                (BKK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                                International Airport (LKO)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                                International Airport (ZYL)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                                (SPD)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                                (JSR)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                                (BANGKOK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                                International Airport (DPS)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                                International Airport (KUL)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                                Airport (SIN)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                                International Airport (DMK)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                                (HAQ)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                                Airport (RJH)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                                (SGI)</small></div>
+                                          </div>
+                                          <div class="item-element ">
+                                            <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                                Sulaiman Airport (BPN)</small></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <span class="details">
+                                      <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                        International Airport (DAC)</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="icon-input-block search-group">
+                              <div class="text-field">
+                                <span class="b-label">Select Date</span>
+                                <div class="position-relative">
+                                  <input id="datepicker" class="form-control shadow-none dropdown-toggle"
+                                    value="13 Sep">
+                                </div>
+                                <span class="details">
+                                  <span class="fw-600">Wednesday</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="icon-input-block search-group">
+                              <div class="TravellerCalulate">
+                                <div class="text">
+                                  <span class="b-label">Passengers &amp; Cabin Class</span>
+                                  <h4>1 Person</h4>
+                                </div>
+                                <span class="details">
+                                  <span class="fw-600">Economy Class</span>
+                                </span>
+                              </div>
+                              <div class="TravellerCalulateDetails position-absolute">
+                                <div class="calculate_info">
+                                  <div class="title d-flex justify-content-between">
+                                    <h6>Passengers</h6>
+                                    <button type="button" class="Close_TravellerCalulateDetails"><i
+                                        class="fas fa-times"></i></button>
+                                  </div>
+                                  <div class="passengers_type d-flex">
+                                    <div class="number">
+                                      1
+                                    </div>
+                                    <div class="info">
+                                      <p>Adults</p>
+                                      <small>12 years and above</small>
+                                    </div>
+                                    <div class="button_set text-end">
+                                      <button><i class="fas fa-minus"></i></button>
+                                      <button><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                  <div class="passengers_type d-flex">
+                                    <div class="number">
+                                      0
+                                    </div>
+                                    <div class="info">
+                                      <p>Children</p>
+                                      <small>2 - below 12 years at the time of travel</small>
+                                    </div>
+                                    <div class="button_set text-end">
+                                      <button><i class="fas fa-minus"></i></button>
+                                      <button><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                  <div class="childDOBlist mt-4 d-flex flex-wrap justify-content-between">
+                                    <div class="child_datepicker_wrapper">
+                                      <div class="input-groups">
+                                        <small>Child 1 Date of Birth*</small>
+                                        <input type="date">
+                                      </div>
+                                    </div>
+                                    <div class="child_datepicker_wrapper">
+                                      <div class="input-groups">
+                                        <small>Child 1 Date of Birth*</small>
+                                        <input type="date">
+                                      </div>
+                                    </div>
+                                    <div class="child_datepicker_wrapper">
+                                      <div class="input-groups">
+                                        <small>Child 1 Date of Birth*</small>
+                                        <input type="date">
+                                      </div>
+                                    </div>
+                                    <div class="child_datepicker_wrapper">
+                                      <div class="input-groups">
+                                        <small>Child 1 Date of Birth*</small>
+                                        <input type="date">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="passengers_type d-flex">
+                                    <div class="number">
+                                      0
+                                    </div>
+                                    <div class="info">
+                                      <p>Infants</p>
+                                      <small>0-23 months at the time of travel</small>
+                                    </div>
+                                    <div class="button_set text-end">
+                                      <button><i class="fas fa-minus"></i></button>
+                                      <button><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="cabin_class">
+                                  <h5>Cabin Class</h5>
+                                  <ul class="list-unstyled">
+                                    <li class="active">
+                                      <button>Economy Class <i class="fas fa-check float-end"></i></button>
+                                    </li>
+                                    <li>
+                                      <button>Premium Economy</button>
+                                    </li>
+                                    <li>
+                                      <button>Business Class</button>
+                                    </li>
+                                    <li>
+                                      <button>First Class</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="button text-center mt-5">
+                          <button type="submit" class="submit__btn">Submit</button>
+                        </div>
+                      </form>
+
+                      <!-- <div class="row">
+                        <div class="col-lg-3">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">From</label>
+                            <input type="email" class="form-control shadow-none">
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">To</label>
+                            <input type="email" class="form-control shadow-none">
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date</label>
+                            <input type="email" class="form-control shadow-none">
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">To</label>
+                            <input type="email" class="form-control shadow-none">
+                          </div>
+                        </div>
+                      </div> -->
+
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="sub-profile" role="tabpanel" aria-labelledby="sub-profile-tab">
+                    <form action="#">
+                      <div class="row g-3">
+                        <div class="col-lg-6">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying from</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Dhaka" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying to</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Depart On</span>
+                                  <div class="position-relative">
+                                    <input id="departDatepicker" class="form-control shadow-none dropdown-toggle"
+                                      value="13 Sep">
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">Wednesday</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Return On</span>
+                                  <div class="position-relative">
+                                    <input id="returnDatepicker" class="form-control shadow-none dropdown-toggle"
+                                      value="13 Sep">
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">Wednesday</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="icon-input-block search-group">
+                            <div class="TravellerCalulate">
+                              <div class="text">
+                                <span class="b-label">Passengers &amp; Cabin Class</span>
+                                <h4>1 Person</h4>
+                              </div>
+                              <span class="details">
+                                <span class="fw-600">Economy Class</span>
+                              </span>
+                            </div>
+                            <div class="TravellerCalulateDetails position-absolute">
+                              <div class="calculate_info">
+                                <div class="title d-flex justify-content-between">
+                                  <h6>Passengers</h6>
+                                  <button type="button" class="Close_TravellerCalulateDetails"><i
+                                      class="fas fa-times"></i></button>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    1
+                                  </div>
+                                  <div class="info">
+                                    <p>Adults</p>
+                                    <small>12 years and above</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    0
+                                  </div>
+                                  <div class="info">
+                                    <p>Children</p>
+                                    <small>2 - below 12 years at the time of travel</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                                <div class="childDOBlist mt-4 d-flex flex-wrap justify-content-between">
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    0
+                                  </div>
+                                  <div class="info">
+                                    <p>Infants</p>
+                                    <small>0-23 months at the time of travel</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cabin_class">
+                                <h5>Cabin Class</h5>
+                                <ul class="list-unstyled">
+                                  <li class="active">
+                                    <button>Economy Class <i class="fas fa-check float-end"></i></button>
+                                  </li>
+                                  <li>
+                                    <button>Premium Economy</button>
+                                  </li>
+                                  <li>
+                                    <button>Business Class</button>
+                                  </li>
+                                  <li>
+                                    <button>First Class</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button text-center mt-5">
+                        <button type="submit" class="submit__btn">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" id="sub-contact" role="tabpanel" aria-labelledby="sub-contact-tab">
+                    <form action="#">
+                      <div class="row g-3">
+                        <div class="col-lg-6">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying from</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Dhaka" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying to</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="icon-input-block search-group">
+                            <div class="text-field">
+                              <span class="b-label">Select Date</span>
+                              <div class="position-relative">
+                                <input id="datepicker" class="form-control shadow-none dropdown-toggle" value="13 Sep">
+                              </div>
+                              <span class="details">
+                                <span class="fw-600">Wednesday</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="icon-input-block search-group">
+                            <div class="TravellerCalulate">
+                              <div class="text">
+                                <span class="b-label">Passengers &amp; Cabin Class</span>
+                                <h4>1 Person</h4>
+                              </div>
+                              <span class="details">
+                                <span class="fw-600">Economy Class</span>
+                              </span>
+                            </div>
+                            <div class="TravellerCalulateDetails position-absolute">
+                              <div class="calculate_info">
+                                <div class="title d-flex justify-content-between">
+                                  <h6>Passengers</h6>
+                                  <button type="button" class="Close_TravellerCalulateDetails"><i
+                                      class="fas fa-times"></i></button>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    1
+                                  </div>
+                                  <div class="info">
+                                    <p>Adults</p>
+                                    <small>12 years and above</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    0
+                                  </div>
+                                  <div class="info">
+                                    <p>Children</p>
+                                    <small>2 - below 12 years at the time of travel</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                                <div class="childDOBlist mt-4 d-flex flex-wrap justify-content-between">
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                  <div class="child_datepicker_wrapper">
+                                    <div class="input-groups">
+                                      <small>Child 1 Date of Birth*</small>
+                                      <input type="date">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="passengers_type d-flex">
+                                  <div class="number">
+                                    0
+                                  </div>
+                                  <div class="info">
+                                    <p>Infants</p>
+                                    <small>0-23 months at the time of travel</small>
+                                  </div>
+                                  <div class="button_set text-end">
+                                    <button><i class="fas fa-minus"></i></button>
+                                    <button><i class="fas fa-plus"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cabin_class">
+                                <h5>Cabin Class</h5>
+                                <ul class="list-unstyled">
+                                  <li class="active">
+                                    <button>Economy Class <i class="fas fa-check float-end"></i></button>
+                                  </li>
+                                  <li>
+                                    <button>Premium Economy</button>
+                                  </li>
+                                  <li>
+                                    <button>Business Class</button>
+                                  </li>
+                                  <li>
+                                    <button>First Class</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-0 g-3">
+                        <div class="col-lg-6">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying from</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Dhaka" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying to</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="icon-input-block search-group">
+                            <div class="text-field">
+                              <span class="b-label">Select Date</span>
+                              <div class="position-relative">
+                                <input id="datepicker" class="form-control shadow-none dropdown-toggle" value="13 Sep">
+                              </div>
+                              <span class="details">
+                                <span class="fw-600">Wednesday</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 align-self-center">
+                          <div class="add_city_layout">
+                            <button type="button"><i class="fas fa-plus"></i> ADD CITY</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-0 g-3">
+                        <div class="col-lg-6">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying from</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Dhaka" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="icon-input-block search-group">
+                                <div class="text-field">
+                                  <span class="b-label">Flying to</span>
+                                  <div class="position-relative">
+                                    <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                      value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="menu flight position-absolute dropdown-menu rounded-0 p-0">
+                                      <div class="item">
+                                        <div class="item-element item-highlighted">
+                                          <div class="text"><strong>DAC</strong><small>Bangladesh, Hazrat Shahjalal
+                                              International Airport (DAC)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DAX</strong><small>China, Dachuan Airport
+                                              (DAX)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SLK</strong><small>United States, Adirondack
+                                              Regional Airport (SLK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CGP</strong><small>Bangladesh, Shah Amanat
+                                              International Airport (CGP)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CCU</strong><small>India, Netaji Subhash Chandra
+                                              Bose International Airport (CCU)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>CXB</strong><small>Bangladesh, Cox's Bazar Airport
+                                              (CXB)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BKK</strong><small>Thailand, Suvarnabhumi Airport
+                                              (BKK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>LKO</strong><small>India, Chaudhary Charan Singh
+                                              International Airport (LKO)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>ZYL</strong><small>Bangladesh, Osmany
+                                              International Airport (ZYL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SPD</strong><small>Bangladesh, Saidpur Airport
+                                              (SPD)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>JSR</strong><small>Bangladesh, Jessore Airport
+                                              (JSR)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BANGKOK</strong><small>Thailand, Bangkok
+                                              (BANGKOK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DPS</strong><small>Indonesia, Ngurah Rai (Bali)
+                                              International Airport (DPS)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>KUL</strong><small>Malaysia, Kuala Lumpur
+                                              International Airport (KUL)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SIN</strong><small>Singapore, Singapore Changi
+                                              Airport (SIN)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>DMK</strong><small>Thailand, Don Mueang
+                                              International Airport (DMK)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>HAQ</strong><small>Maldives, Hanimaadhoo Airport
+                                              (HAQ)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>RJH</strong><small>Bangladesh, Shah Mokhdum
+                                              Airport (RJH)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>SGI</strong><small>Pakistan, Mushaf Air Base
+                                              (SGI)</small></div>
+                                        </div>
+                                        <div class="item-element ">
+                                          <div class="text"><strong>BPN</strong><small>Indonesia, Sultan Aji Muhamad
+                                              Sulaiman Airport (BPN)</small></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <span class="details">
+                                    <span class="fw-600">DAC, Bangladesh, Hazrat Shahjalal
+                                      International Airport (DAC)</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="icon-input-block search-group">
+                            <div class="text-field">
+                              <span class="b-label">Select Date</span>
+                              <div class="position-relative">
+                                <input id="datepicker" class="form-control shadow-none dropdown-toggle" value="13 Sep">
+                              </div>
+                              <span class="details">
+                                <span class="fw-600">Wednesday</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 align-self-center">
+                          <div class="remove_city_layout">
+                            <button type="button"><i class="fas fa-minus"></i> REMOVE</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="button text-center mt-5">
+                        <button type="submit" class="submit__btn">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form action="#">
+                <div class="row g-3">
+                  <div class="col-lg-4">
+                    <div class="row g-0">
+                      <div class="col-lg-12">
+                        <div class="icon-input-block search-group">
+                          <div class="text-field">
+                            <span class="b-label">Enter City or Property</span>
+                            <div class="position-relative">
+                              <input placeholder="Airport" class="form-control shadow-none dropdown-toggle"
+                                value="Cox's Bazar" data-bs-toggle="dropdown" aria-expanded="false">
+                              <div class="menu hotel mt-1 position-absolute dropdown-menu rounded-0 p-0">
+                                <div class="item">
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="text"><strong>New Delhi</strong><small>India</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="text"><strong>New York</strong><small>United States of America</small>
+                                    </div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>Vista Rooms at New Market</strong><small>India</small>
+                                    </div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>Radisson Blu Marina Hotel Connaught
+                                        Place</strong><small>India</small></div>
+                                  </div>
+                                  <div class="item-element item-highlighted">
+                                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="text"><strong>New Delhi and NCR</strong><small>India</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="text"><strong>Auckland</strong><small>New Zealand</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>Hotel City Star</strong><small>India</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>The Park New Delhi</strong><small>India</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>The Manhattan at Times Square Hotel</strong><small>United
+                                        States of America</small></div>
+                                  </div>
+                                  <div class="item-element ">
+                                    <div class="icon"><i class="fas fa-hotel"></i></div>
+                                    <div class="text"><strong>Howard Johnson Inn Queens</strong><small>United States of
+                                        America</small></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <span class="details">
+                              <span class="fw-600">Cox's Bazar, Bangladesh</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row g-0">
+                      <div class="col-lg-6">
+                        <div class="icon-input-block search-group">
+                          <div class="text-field">
+                            <span class="b-label">Check-in-date</span>
+                            <div class="position-relative">
+                              <input id="departDatepicker" class="form-control shadow-none dropdown-toggle"
+                                value="13 Sep">
+                            </div>
+                            <span class="details">
+                              <span class="fw-600">Wednesday</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="icon-input-block search-group">
+                          <div class="text-field">
+                            <span class="b-label">Check-out-date</span>
+                            <div class="position-relative">
+                              <input id="returnDatepicker" class="form-control shadow-none dropdown-toggle"
+                                value="13 Sep">
+                            </div>
+                            <span class="details">
+                              <span class="fw-600">Wednesday</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="icon-input-block search-group">
+                      <div class="PassengerCalulate">
+                        <div class="text">
+                          <span class="b-label">Passengers &amp; Cabin Class</span>
+                          <h4>1 Person</h4>
+                        </div>
+                        <span class="details">
+                          <span class="fw-600">Economy Class</span>
+                        </span>
+                      </div>
+                      <div class="ServicePassengersSelect position-absolute">
+                        <div class="guest_icon_info">
+                          <div class="icon"><i class="fas fa-users"></i></div>
+                          <div class="text-field"><span>Guest(s) &amp; Room(s)</span>
+                            <h4>2 Guest - 1 Room</h4>
+                          </div>
+                        </div>
+                        <div class="head_info">
+                          <span class="fw-500">Room 1 (max 6 Guest)</span>
+                          <span class="roomNumberSelect fz14"><select class="">
+                              <option value="1">1 Room</option>
+                              <option value="2">2 Room</option>
+                              <option value="3">3 Room</option>
+                              <option value="4">4 Room</option>
+                            </select>
+                          </span>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-between">
+                          <div class="block-wrapper">
+                            <div class="block">
+                              <div class="mdi mdi-minus"><i class="fas fa-minus"></i></div>
+                              <div class="text"><span>2</span> Adult</div>
+                              <div class="mdi mdi-plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                          </div>
+                          <div class="block-wrapper">
+                            <div class="block">
+                              <div class="mdi mdi-minus"><i class="fas fa-minus"></i></div>
+                              <div class="text"><span>0</span> Child</div>
+                              <div class="mdi mdi-plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="child-age block-container">
+                          <div class="fz14 text-center py-2"><small>Children’s Age (at check-out)</small></div>
+                          <div class="d-flex justify-content-between flex-wrap">
+                            <div class="block-wrapper">
+                              <div class="block">
+                                <div class="mdi mdi-minus"><i class="fas fa-minus"></i></div>
+                                <div class="text"><span>0</span> Child</div>
+                                <div class="mdi mdi-plus"><i class="fas fa-plus"></i></div>
+                              </div>
+                              <div class="fz14 text-center py-1"><small>Child 1</small></div>
+                            </div>
+                            <div class="block-wrapper">
+                              <div class="block">
+                                <div class="mdi mdi-minus"><i class="fas fa-minus"></i></div>
+                                <div class="text"><span>0</span> Child</div>
+                                <div class="mdi mdi-plus"><i class="fas fa-plus"></i></div>
+                              </div>
+                              <div class="fz14 text-center py-1"><small>Child 2</small></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="button text-center mt-5">
+                  <button type="submit" class="submit__btn">Submit</button>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Top-Level
+              Tab Content for HOTEL BOOKING</div>
+            <div class="tab-pane fade" id="pills-serve" role="tabpanel" aria-labelledby="pills-serve-tab">Top-Level Tab
+              Content for TOUR PACKAGE</div>
+          </div>
+        </div>
+      </div>
+      <div class="banner_btm_info">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="explore d-flex align-items-center">
+              <div class="icon">
+                <img src="images/location.png" alt="" width="60">
+              </div>
+              <div class="text">
+                <h4>Can I travel to…?</h4>
+                <a href="" class="more-info">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="track_flight d-flex align-items-center">
+              <div class="icon">
+                <img src="images/flight.png" alt="" width="60">
+              </div>
+              <div class="text">
+                <h4>Can I travel to…?</h4>
+                <a href="" class="more-info">Track Flight</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="track_visa d-flex align-items-center">
+              <div class="icon">
+                <img src="images/book.png" alt="" width="60">
+              </div>
+              <div class="text">
+                <h4>Can I travel to…?</h4>
+                <form action="#">
+                  <div class="input-groups">
+                    <input type="text" placeholder="ST Ref. No.">
+                    <button type="submit" class="more-info submit_btn">Go</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- banner part end -->
+
+  <!-- feature part start -->
+  <section class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="feature_slider">
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature_slider">
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature_slider">
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- feature part end -->
+
+  <!-- lighting deal part start -->
+  <section class="lighting_deal">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4 class="common_title">Lightning Deals</h4>
+        </div>
+      </div>
+      <div class="row lighting_deal_slider">
+        <div class="col-lg-3">
+          <div class="slider_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/lighting-1.png" alt="lighting-1" class="img-fluid w-100">
+                <div class="timer">
+                  <i class="far fa-clock"></i>
+                  <span id="demo-1"></span>
+                </div>
+                <div class="trending">
+                  <i class="fas fa-bolt"></i>
+                  <span>Trending</span>
+                </div>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-2">Sharjah: The cultural capital of the Arab World!...</h4>
+                <ul class="list-unstyled">
+                  <li><i class="far fa-calendar"></i> 4 days</li>
+                  <li><i class="fas fa-map-marker-alt"></i> kolkata , india</li>
+                </ul>
+                <h5>BDT 16,000/ <small>per person</small></h5>
+                <h3><i class="fab fa-bitcoin"></i> 81,515</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="slider_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/lighting-1.png" alt="lighting-1" class="img-fluid w-100">
+                <div class="timer">
+                  <i class="far fa-clock"></i>
+                  <span id="demo-2"></span>
+                </div>
+                <div class="trending">
+                  <i class="fas fa-bolt"></i>
+                  <span>Trending</span>
+                </div>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-2">Sharjah: The cultural capital of the Arab World!...</h4>
+                <ul class="list-unstyled">
+                  <li><i class="far fa-calendar"></i> 4 days</li>
+                  <li><i class="fas fa-map-marker-alt"></i> kolkata , india</li>
+                </ul>
+                <h5>BDT 16,000/ <small>per person</small></h5>
+                <h3><i class="fab fa-bitcoin"></i> 81,515</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="slider_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/lighting-1.png" alt="lighting-1" class="img-fluid w-100">
+                <div class="timer">
+                  <i class="far fa-clock"></i>
+                  <span id="demo-3"></span>
+                </div>
+                <div class="trending">
+                  <i class="fas fa-bolt"></i>
+                  <span>Trending</span>
+                </div>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-2">Sharjah: The cultural capital of the Arab World!...</h4>
+                <ul class="list-unstyled">
+                  <li><i class="far fa-calendar"></i> 4 days</li>
+                  <li><i class="fas fa-map-marker-alt"></i> kolkata , india</li>
+                </ul>
+                <h5>BDT 16,000/ <small>per person</small></h5>
+                <h3><i class="fab fa-bitcoin"></i> 81,515</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="slider_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/lighting-1.png" alt="lighting-1" class="img-fluid w-100">
+                <div class="timer">
+                  <i class="far fa-clock"></i>
+                  <span id="demo-4"></span>
+                </div>
+                <div class="trending">
+                  <i class="fas fa-bolt"></i>
+                  <span>Trending</span>
+                </div>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-2">Sharjah: The cultural capital of the Arab World!...</h4>
+                <ul class="list-unstyled">
+                  <li><i class="far fa-calendar"></i> 4 days</li>
+                  <li><i class="fas fa-map-marker-alt"></i> kolkata , india</li>
+                </ul>
+                <h5>BDT 16,000/ <small>per person</small></h5>
+                <h3><i class="fab fa-bitcoin"></i> 81,515</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="slider_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/lighting-1.png" alt="lighting-1" class="img-fluid w-100">
+                <div class="timer">
+                  <i class="far fa-clock"></i>
+                  <span id="demo-5"></span>
+                </div>
+                <div class="trending">
+                  <i class="fas fa-bolt"></i>
+                  <span>Trending</span>
+                </div>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-2">Sharjah: The cultural capital of the Arab World!...</h4>
+                <ul class="list-unstyled">
+                  <li><i class="far fa-calendar"></i> 4 days</li>
+                  <li><i class="fas fa-map-marker-alt"></i> kolkata , india</li>
+                </ul>
+                <h5>BDT 16,000/ <small>per person</small></h5>
+                <h3><i class="fab fa-bitcoin"></i> 81,515</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- lighting deal part end -->
+
+  <!-- popular destination part start -->
+  <section class="popular_destination">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4 class="common_title">Packages in Popular Destinations</h4>
+        </div>
+      </div>
+      <div class="big_destination">
+        <a href="" class="img-fluid w-100">
+          <div class="image position-relative">
+            <img src="images/destination-big.png" alt="destination-big" class="img-fluid w-100">
+            <div class="text position-absolute">
+              <span><i class="fas fa-box-open"></i> 39 Packages</span>
+              <h3>Kathmandu</h3>
+              <h5><small>Starts From</small> BDT 4,600</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row gx-4 gy-4">
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="img-fluid w-100">
+            <div class="destination_item">
+              <div class="image">
+                <img src="images/des-item.png" alt="des-item" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <span><i class="fas fa-box-open"></i> 39 Packages</span>
+                <h3>Kathmandu</h3>
+                <h5><small>Starts From</small> BDT 4,600</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- popular destination part end -->
+
+  <!-- pupular route part start -->
+  <section class="popular_route">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4 class="common_title">Search for cheapest flights in popular route</h4>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="" class="d-block w-100">
+            <div class="popular_route_item">
+              <div class="left_icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <div class="text">
+                <h4 class="line-limit-1">Dhaka - Coxs Bazar</h4>
+                <h5><small>From</small> BDT 4,348</h5>
+              </div>
+              <div class="right_icon">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- pupular route part end -->
+
+  <!-- visa service part start -->
+  <section class="visa_service">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-12">
+          <div class="text-center">
+            <h4 class="common_title">Visa Service</h4>
+            <p>Search for visa services for popular countries</p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="visa_service_item">
+            <a href="" class="d-block w-100">
+              <div class="image">
+                <img src="images/visa-service.png" alt="visa-service" class="img-fluid w-100">
+                <div class="title">
+                  <h5>North America</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- visa service part end -->
+
+  <!-- sister concern part start -->
+  <section class="sister_concern">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-center">
+            <h4 class="common_title">Our sister concern </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row sister_slider">
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="sister_concern_item">
+            <a href="" class="d-block w-100">
+              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- sister concern part end -->
+  <!-- our client part start -->
+  <section class="our_client">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-center">
+            <h4 class="common_title">Our sister concern </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row client_slider">
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="client_slider_item">
+            <a href="" class="d-block w-100">
+              <img src="images/cliend.png" alt="cliend" class="img-fluid w-100">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- our client part end -->
+  <!-- footer part start -->
+  <a id="button"><i class="fas fa-angle-up"></i></a>
+
+  <footer>
+    <div class="footer-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h4 class="footer_title">Company</h4>
+            <ul class="links list-unstyled">
+              <li><a href="">About us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="footer_title">Explore</h4>
+            <ul class="links list-unstyled">
+              <li><a href="">Spin to win</a></li>
+              <li><a href="">Leader board</a></li>
+              <li><a href="">Hotel Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="footer_title">Help</h4>
+            <ul class="links list-unstyled">
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Support center</a></li>
+              <li><a href="">Payment security</a></li>
+              <li><a href="">Privacy policy</a></li>
+              <li><a href="">EMI</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="footer_title">Terms & Condition</h4>
+            <ul class="links list-unstyled">
+              <li><a href="">General</a></li>
+              <li><a href="">Spin to win</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="more_information">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="left_part">
+                <h4 class="more_title">Address</h4>
+                <div class="address_block">
+                  <h5>Dhaka Office</h5>
+                  <p>ShareTrip Ltd.
+                    Rangs Pearl Tower, 4th Floor,
+                    House no. 76, Road 12, Block E,
+                    Banani, Dhaka 1213, Bangladesh</p>
+                </div>
+                <div class="address_block">
+                  <h5>Chattogram Office</h5>
+                  <p>ShareTrip Ltd.
+                    BM Heights, 5th Floor,
+                    318 Sheikh Mujib Road, Badamtoli,
+                    Agrabad, Chattogram</p>
+                </div>
+                <div class="address_block">
+                  <ul class="list-unstyled info">
+                    <li>
+                      <a
+                        href="https://api.whatsapp.com/send/?phone=8801958391164&amp;text&amp;type=phone_number&amp;app_absent=0"><i
+                          class="fab fa-whatsapp"></i> Message us on WhatsApp</a>
+                    </li>
+                    <li>
+                      <a href="mailto:ask@sharetrip.net"><i class="fas fa-envelope"></i> ask@sharetrip.net</a>
+                    </li>
+                    <li>
+                      <a href="tel:+8809617617617"><i class="fas fa-phone-alt"></i> +8809617617617</a>
+                    </li>
+                    <li><i class="fas fa-info-circle"></i> Office Hour : 9 AM - 10 PM</li>
+                  </ul>
+                  <ul class="list-unstyled social">
+                    <li>
+                      <a href=""><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fab fa-facebook-messenger"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 ms-auto">
+              <div class="right_part">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <h4 class="more_title">Accredited Member</h4>
+                    <div class="row">
+                      <div class="col-lg">
+                        <img src="images/bs.jpg" alt="bs" width="94">
+                      </div>
+                      <div class="col-lg">
+                        <img src="images/ec.jpg" alt="bs" width="94">
+                      </div>
+                      <div class="col-lg">
+                        <img src="images/pa.jpg" alt="bs" width="94">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4 class="more_title">Verified by</h4>
+                        <img src="images/vy.png" alt="bs" width="94">
+                      </div>
+                      <div class="col-lg-4">
+                        <h4 class="more_title">Authorised by</h4>
+                        <img src="images/au.png" alt="bs" width="94">
+                      </div>
+                      <div class="col-lg-4">
+                        <h4 class="more_title">Approved Agent</h4>
+                        <img src="images/ap.png" alt="bs" width="94">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-lg-2">
+                    <h4 class="more_title">Our Partners</h4>
+                    <a href=""><img src="images/gg.png" alt="bs" width="94"></a>
+                  </div>
+                  <div class="col-lg-3">
+                    <h4 class="more_title">Registered at</h4>
+                    <img src="images/register.png" alt="bs">
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-lg-12">
+                    <h4 class="more_title">We Accept</h4>
+                    <img src="images/payment.png" alt="bs">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="text">
+                <p>Copyright @ 2023. ShareTrip. All rights reserved.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text text-end">
+                <p>Developed by: <a href="">Nogor Solutions Limited</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer part end -->
+
+  <!-- all js link -->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

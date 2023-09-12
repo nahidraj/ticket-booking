@@ -1,0 +1,144 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+footer {
+  .footer-bg {
+    background-color: #F5F5F5;
+    padding-top: 80px;
+
+    .footer_title {
+      @include font(23px, 500);
+      margin-bottom: 24px;
+    }
+
+    .links {
+      a {
+        color: #4c4c4c;
+        margin-bottom: 8px;
+        transition: all linear .2s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .more_information {
+      margin-top: 40px;
+
+      .more_title {
+        @include font(20px, 600);
+        margin-bottom: 20px;
+      }
+
+      .address_block {
+        margin-bottom: 14px;
+
+        h5 {
+          @include font(16px, 600);
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .address_block {
+      .info {
+        li {
+          color: $primary;
+          margin-bottom: 8px;
+          @include font(18px, 400);
+
+          i {
+            margin-right: 4px;
+          }
+        }
+
+        a {
+          color: $primary;
+        }
+      }
+
+      .social {
+        margin-top: 20px;
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 20px;
+
+          .fa-facebook {
+            color: #097CEA;
+          }
+
+          .fa-facebook-messenger {
+            color: #0099FF;
+          }
+
+          .fa-twitter {
+            color: #3B7FFF;
+          }
+
+          .fa-instagram {
+            color: #1B1B1B;
+          }
+
+          .fa-youtube {
+            color: #FF0001;
+          }
+
+          .fa-linkedin-in {
+            color: #0073AF;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      margin-top: 50px;
+      padding-bottom: 50px;
+
+      p {
+        a {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+#button {
+  display: inline-block;
+  background-color: $primary;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: updown 2s linear infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
