@@ -80,37 +80,40 @@ $(function () {
     ]
   })
 
+  $(".js-select2").select2({
+    closeOnSelect: true
+  });
 
-  $(".TravellerCalulate").on("click", function () {
-    $(".TravellerCalulateDetails").toggleClass("ShowTravellerCalulateDetails")
-  })
-  
-// Get references to the PassengerCalulate and ServicePassengersSelect elements
-const passengerCalulate = document.querySelector(".PassengerCalulate");
-const servicePassengersSelect = document.querySelector(".ServicePassengersSelect");
+  // $(".TravellerCalulate").on("click", function () {
+  //   $(".TravellerCalulateDetails").toggleClass("ShowTravellerCalulateDetails")
+  // })
 
-// Add a click event listener to the PassengerCalulate element
-passengerCalulate.addEventListener("click", function (event) {
-  // Prevent the click event from propagating to the document
-  event.stopPropagation();
+  // // Get references to the PassengerCalulate and ServicePassengersSelect elements
+  // const passengerCalulate = document.querySelector(".PassengerCalulate");
+  // const servicePassengersSelect = document.querySelector(".ServicePassengersSelect");
 
-  // Toggle the "Show-ServicePassengersSelect" class on the ServicePassengersSelect element
-  servicePassengersSelect.classList.toggle("Show-ServicePassengersSelect");
-});
+  // // Add a click event listener to the PassengerCalulate element
+  // passengerCalulate.addEventListener("click", function (event) {
+  //   // Prevent the click event from propagating to the document
+  //   event.stopPropagation();
 
-// Add a click event listener to the document
-document.addEventListener("click", function (event) {
-  // Check if the click target is not within PassengerCalulate or its children
-  if (!passengerCalulate.contains(event.target) && !servicePassengersSelect.contains(event.target)) {
-    // Hide the ServicePassengersSelect element
-    servicePassengersSelect.classList.remove("Show-ServicePassengersSelect");
-  }
-});
+  //   // Toggle the "Show-ServicePassengersSelect" class on the ServicePassengersSelect element
+  //   servicePassengersSelect.classList.toggle("Show-ServicePassengersSelect");
+  // });
+
+  // // Add a click event listener to the document
+  // document.addEventListener("click", function (event) {
+  //   // Check if the click target is not within PassengerCalulate or its children
+  //   if (!passengerCalulate.contains(event.target) && !servicePassengersSelect.contains(event.target)) {
+  //     // Hide the ServicePassengersSelect element
+  //     servicePassengersSelect.classList.remove("Show-ServicePassengersSelect");
+  //   }
+  // });
 
 
-  $(".Close_TravellerCalulateDetails").on("click", function () {
-    $(".TravellerCalulateDetails").removeClass("ShowTravellerCalulateDetails")
-  })
+  // $(".Close_TravellerCalulateDetails").on("click", function () {
+  //   $(".TravellerCalulateDetails").removeClass("ShowTravellerCalulateDetails")
+  // })
 
   // sister slider js
   $(".sister_slider").slick({
@@ -153,13 +156,19 @@ document.addEventListener("click", function (event) {
     numberOfMonths: 1,
   });
 
-  $("#departDatepicker").datepicker({
+  $("#datepicker2").datepicker({
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,
   });
 
-  $("#returnDatepicker").datepicker({
+  $("#datepicker3").datepicker({
+    changeMonth: true,
+    changeYear: true,
+    numberOfMonths: 1,
+  });
+  
+  $("#datepicker4").datepicker({
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,

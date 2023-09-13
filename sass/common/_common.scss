@@ -45,7 +45,7 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none;                        
 }
 
 ul,
@@ -59,6 +59,7 @@ body {
   @include font(16px, 400);
   color: $black;
   font-family: 'Roboto Condensed', sans-serif;
+  // background-color: $body;
 }
 
 ::selection {

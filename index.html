@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="fontawsome/css/all.min.css">
   <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
@@ -82,20 +83,498 @@
                 VISA PROCESSING</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i
-                  class="fas fa-hotel"></i> HOTEL BOOKING</button>
-            </li>
-            <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-serve-tab" data-bs-toggle="pill" data-bs-target="#pills-serve"
                 type="button" role="tab" aria-controls="pills-serve" aria-selected="false"><i
                   class="fas fa-box-open"></i> TOUR PACKAGE</button>
             </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i
+                  class="fas fa-plane-departure"></i>Hajj / Umrah</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact1-tab" data-bs-toggle="pill" data-bs-target="#pills-contact1"
+                type="button" role="tab" aria-controls="pills-contact1" aria-selected="false"><i
+                  class="fas fa-info-circle"></i>Query</button>
+            </li>
           </ul>
         </div>
 
+
+
         <div class="menu_wise_information">
           <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form action="#">
+                <div class="radio_fields mb-4 mt-2">
+                  <div class="d-flex">
+                    <div class="form-check me-3">
+                      <input class="form-check-input shadow-none" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        One Way
+                      </label>
+                    </div>
+                    <div class="form-check me-3">
+                      <input class="form-check-input shadow-none" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Round Trip
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input shadow-none" type="radio" name="exampleRadios" id="exampleRadios3"
+                        value="option3">
+                      <label class="form-check-label" for="exampleRadios3">
+                        Multi-City
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="main_forms">
+                  <div class="fieldset">
+                    <h5>Ticket Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Flying from</label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Flying to</label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Select date</label>
+                          <input type="text" id="datepicker" value="Select date">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Passengers</label>
+                          <select class="js-select2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fieldset">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Fullname</label>
+                          <input type="text" placeholder="Your fullname">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Cellphone</label>
+                          <input type="text" placeholder="Your Cellphone">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your email</label>
+                          <input type="email" placeholder="Your email">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="input_groups">
+                          <label>Your Full Address</label>
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button text-center mt-2">
+                    <button type="submit" class="submit__btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form action="#">
+                <div class="main_forms mt-3">
+                  <div class="fieldset">
+                    <h5>Visa Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Which Country</label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Date of entry</label>
+                          <input type="text" id="datepicker2" value="Select date">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Date of exit</label>
+                          <input type="text" id="datepicker3" value="Select date">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Nationality </label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fieldset">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Fullname</label>
+                          <input type="text" placeholder="Your fullname">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Cellphone</label>
+                          <input type="text" placeholder="Your Cellphone">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your email</label>
+                          <input type="email" placeholder="Your email">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="input_groups">
+                          <label>Your Full Address</label>
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button text-center mt-2">
+                    <button type="submit" class="submit__btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-serve" role="tabpanel" aria-labelledby="pills-serve-tab">
+              <form action="#">
+                <div class="main_forms mt-3">
+                  <div class="fieldset">
+                    <h5>Tour Package Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Destination</label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 align-self-center">
+                        <div class="input_groups">
+                          <label><span class="d-none">Travel date</span></label>
+                          <div class="add_city_layout">
+                            <button type="button">ADD CITY</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Travel date</label>
+                          <input type="text" id="datepicker4" value="Select date">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Rooms</label>
+                          <select class="js-select2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button text-center mt-2">
+                    <button type="submit" class="submit__btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <form action="#">
+                <div class="radio_fields mb-4 mt-2">
+                  <div class="d-flex">
+                    <div class="form-check me-3">
+                      <input class="form-check-input shadow-none" type="radio" name="exampleRadios" id="exampleRadios4"
+                        value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios4">
+                        Full Hajj
+                      </label>
+                    </div>
+                    <div class="form-check me-3">
+                      <input class="form-check-input shadow-none" type="radio" name="exampleRadios" id="exampleRadios5"
+                        value="option2">
+                      <label class="form-check-label" for="exampleRadios5">
+                        Umrah
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="main_forms">
+                  <div class="fieldset">
+                    <h5>Hajj / Umrah Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Which Year</label>
+                          <select class="js-select2">
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Passengers</label>
+                          <select class="js-select2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fieldset">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Fullname</label>
+                          <input type="text" placeholder="Your fullname">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your Cellphone</label>
+                          <input type="text" placeholder="Your Cellphone">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Your email</label>
+                          <input type="email" placeholder="Your email">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="input_groups">
+                          <label>Your Full Address</label>
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button text-center mt-2">
+                    <button type="submit" class="submit__btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact1-tab">
+              <form action="#">
+                <div class="main_forms mt-3">
+                  <div class="fieldset">
+                    <h5>Contact Us</h5>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Fullname</label>
+                          <input type="text" placeholder="Your fullname">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Telephone</label>
+                          <input type="text" placeholder="Your Cellphone">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Email</label>
+                          <input type="email" placeholder="Your email">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input_groups">
+                          <label>Subject</label>
+                          <input type="email" placeholder="Your email">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="input_groups">
+                          <label>Comments</label>
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button text-center mt-2">
+                    <button type="submit" class="submit__btn">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- <div class="menu_wise_information">
+          <div class="tab-content" id="pills-tabContent">
+
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <div class="sub_menu_tabs">
                 <ul class="nav nav-pills" id="sub-tabs" role="tablist">
@@ -444,34 +923,7 @@
                           <button type="submit" class="submit__btn">Submit</button>
                         </div>
                       </form>
-
-                      <!-- <div class="row">
-                        <div class="col-lg-3">
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">From</label>
-                            <input type="email" class="form-control shadow-none">
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">To</label>
-                            <input type="email" class="form-control shadow-none">
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Date</label>
-                            <input type="email" class="form-control shadow-none">
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">To</label>
-                            <input type="email" class="form-control shadow-none">
-                          </div>
-                        </div>
-                      </div> -->
-
+                      
                     </div>
                   </div>
                   <div class="tab-pane fade" id="sub-profile" role="tabpanel" aria-labelledby="sub-profile-tab">
@@ -1598,6 +2050,7 @@
                 </div>
               </div>
             </div>
+
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <form action="#">
                 <div class="row g-3">
@@ -1774,12 +2227,21 @@
                 </div>
               </form>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Top-Level
-              Tab Content for HOTEL BOOKING</div>
+
             <div class="tab-pane fade" id="pills-serve" role="tabpanel" aria-labelledby="pills-serve-tab">Top-Level Tab
               Content for TOUR PACKAGE</div>
+
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Top-Level
+              Tab Content for HOTEL BOOKING</div>
+
+            <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact1-tab">
+              Top-Level
+              Tab Content for HOTEL BOOKING 1</div>
+
           </div>
-        </div>
+        </div> -->
+
+
       </div>
       <div class="banner_btm_info">
         <div class="row">
@@ -1840,7 +2302,7 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1851,7 +2313,7 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1862,44 +2324,7 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="feature_slider">
-            <div class="slider_item d-flex">
-              <div class="image">
-                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
-              </div>
-              <div class="text">
-                <a href="" class="d-block w-100">
-                  <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
-                </a>
-              </div>
-            </div>
-            <div class="slider_item d-flex">
-              <div class="image">
-                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
-              </div>
-              <div class="text">
-                <a href="" class="d-block w-100">
-                  <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
-                </a>
-              </div>
-            </div>
-            <div class="slider_item d-flex">
-              <div class="image">
-                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
-              </div>
-              <div class="text">
-                <a href="" class="d-block w-100">
-                  <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1914,7 +2339,7 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1925,7 +2350,7 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1936,7 +2361,44 @@
               <div class="text">
                 <a href="" class="d-block w-100">
                   <p class="line-limit-2">Vote now for your favorite airlines</p>
-                  <h4 class="line-limit-3">ShareTrip - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature_slider">
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
+                </a>
+              </div>
+            </div>
+            <div class="slider_item d-flex">
+              <div class="image">
+                <img src="images/f-image.png" alt="f-image" class="img-fluid w-100">
+              </div>
+              <div class="text">
+                <a href="" class="d-block w-100">
+                  <p class="line-limit-2">Vote now for your favorite airlines</p>
+                  <h4 class="line-limit-3">4S Tours & Travels - Title Sponsor of Monitor Airline of the Year 2023</h4>
                 </a>
               </div>
             </div>
@@ -1949,7 +2411,7 @@
   <!-- feature part end -->
 
   <!-- lighting deal part start -->
-  <section class="lighting_deal">
+  <!-- <section class="lighting_deal">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -2089,7 +2551,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- lighting deal part end -->
 
   <!-- popular destination part start -->
@@ -2539,49 +3001,49 @@
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0002.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0003.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0004.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0005.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0006.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0007.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="sister_concern_item">
             <a href="" class="d-block w-100">
-              <img src="images/sister.png" alt="sister" class="img-fluid w-100">
+              <img src="images/IMG-20230913-WA0008.jpg" alt="sister" class="img-fluid w-100">
             </a>
           </div>
         </div>
@@ -2590,12 +3052,12 @@
   </section>
   <!-- sister concern part end -->
   <!-- our client part start -->
-  <section class="our_client">
+  <!-- <section class="our_client">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="text-center">
-            <h4 class="common_title">Our sister concern </h4>
+            <h4 class="common_title">Our Client </h4>
           </div>
         </div>
       </div>
@@ -2651,7 +3113,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- our client part end -->
   <!-- footer part start -->
   <a id="button"><i class="fas fa-angle-up"></i></a>
@@ -2699,17 +3161,8 @@
                 <h4 class="more_title">Address</h4>
                 <div class="address_block">
                   <h5>Dhaka Office</h5>
-                  <p>ShareTrip Ltd.
-                    Rangs Pearl Tower, 4th Floor,
-                    House no. 76, Road 12, Block E,
-                    Banani, Dhaka 1213, Bangladesh</p>
-                </div>
-                <div class="address_block">
-                  <h5>Chattogram Office</h5>
-                  <p>ShareTrip Ltd.
-                    BM Heights, 5th Floor,
-                    318 Sheikh Mujib Road, Badamtoli,
-                    Agrabad, Chattogram</p>
+                  <p>24, Sonargaon Janapath, 2nd Floor
+                    Sector-11, Uttara, Dhaka-1230</p>
                 </div>
                 <div class="address_block">
                   <ul class="list-unstyled info">
@@ -2719,10 +3172,10 @@
                           class="fab fa-whatsapp"></i> Message us on WhatsApp</a>
                     </li>
                     <li>
-                      <a href="mailto:ask@sharetrip.net"><i class="fas fa-envelope"></i> ask@sharetrip.net</a>
+                      <a href="info@4stravels"><i class="fas fa-envelope"></i> info@4stravels</a>
                     </li>
                     <li>
-                      <a href="tel:+8809617617617"><i class="fas fa-phone-alt"></i> +8809617617617</a>
+                      <a href="tel:0215484654654654"><i class="fas fa-phone-alt"></i> 0215484654654654</a>
                     </li>
                     <li><i class="fas fa-info-circle"></i> Office Hour : 9 AM - 10 PM</li>
                   </ul>
@@ -2807,7 +3260,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="text">
-                <p>Copyright @ 2023. ShareTrip. All rights reserved.</p>
+                <p>Copyright @ 2023. 4S Tours & Travels. All rights reserved.</p>
               </div>
             </div>
             <div class="col-lg-6">
@@ -2826,6 +3279,7 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="js/script.js"></script>
 </body>
