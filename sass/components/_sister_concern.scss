@@ -1,10 +1,38 @@
 @import "../variable/variable";
 @import "../mixin/font";
 
-.sister_concern{
+.sister_concern {
   padding-top: 80px;
-  .sister_concern_item{
+
+  .sister_concern_item {
     padding: 30px;
     margin: 0 12px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all linear .2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+  .left{
+    left: -42px;
+    z-index: 9;
+  }
+  .right{
+    left: 100%;
   }
 }

@@ -26,13 +26,13 @@ $(function () {
     responsive: [{
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         }
       },
       {
@@ -46,39 +46,39 @@ $(function () {
   })
 
   // lighting deal slider js
-  $(".lighting_deal_slider").slick({
-    dots: false,
-    infinite: true,
-    autoplaySpeed: 2000,
-    speed: 1000,
-    slidesToShow: 4,
-    fade: false,
-    autoplay: false,
-    arrows: true,
-    slidesToScroll: 1,
-    prevArrow: '<i class="fas fa-arrow-left left icon"></i>',
-    nextArrow: '<i class="fas fa-arrow-right right icon"></i>',
-    responsive: [{
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  })
+  // $(".lighting_deal_slider").slick({
+  //   dots: false,
+  //   infinite: true,
+  //   autoplaySpeed: 2000,
+  //   speed: 1000,
+  //   slidesToShow: 4,
+  //   fade: false,
+  //   autoplay: false,
+  //   arrows: true,
+  //   slidesToScroll: 1,
+  //   prevArrow: '<i class="fas fa-arrow-left left icon"></i>',
+  //   nextArrow: '<i class="fas fa-arrow-right right icon"></i>',
+  //   responsive: [{
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1
+  //       }
+  //     }
+  //   ]
+  // })
 
   $(".js-select2").select2({
     closeOnSelect: true
@@ -123,15 +123,15 @@ $(function () {
     speed: 800,
     slidesToShow: 5,
     fade: false,
-    autoplay: true,
-    arrows: false,
+    autoplay: false,
+    arrows: true,
     slidesToScroll: 1,
     prevArrow: '<i class="fas fa-arrow-left left icon"></i>',
     nextArrow: '<i class="fas fa-arrow-right right icon"></i>',
     responsive: [{
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
         }
       },
       {
@@ -150,7 +150,7 @@ $(function () {
     ]
   })
 
-  $("#datepicker").datepicker({
+  $("#datepicker6").datepicker({
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,
@@ -167,8 +167,13 @@ $(function () {
     changeYear: true,
     numberOfMonths: 1,
   });
-  
+
   $("#datepicker4").datepicker({
+    changeMonth: true,
+    changeYear: true,
+    numberOfMonths: 1,
+  });
+  $("#datepicker5").datepicker({
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,

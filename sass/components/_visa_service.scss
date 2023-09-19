@@ -8,23 +8,60 @@
     margin-bottom: 0;
     color: $primary;
   }
+}
 
+.visa_service_tabs {
+  margin-bottom: 20px;
+
+  .nav-pills .nav-link.active {
+    background-color: $primary;
+    color: $white;
+    border-color: $primary
+  }
+
+  .nav-pills .nav-link {
+    @include font(18px, 500);
+    color: $black;
+    border: 1px solid $black;
+    margin-right: 10px;
+    padding: 5px 20px;
+  }
+}
+
+.visa_service_info {
   .visa_service_item {
-    .image {
-      position: relative;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: all linear .2s;
 
-      .title {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 14px 14px;
-        background-color: rgba(0, 173, 239, 0.3);
-        width: 100%;
-        text-align: center;
-        h5{
-          @include font(22px, 500);
-        }
+    .image {
+      width: 75px;
+      height: 75px;
+      overflow: hidden;
+      border-radius: 5px;
+
+      img {
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+
+    .text {
+      width: 190px;
+      h4 {
+        @include font(20px, 600);
+        transition: all linear .2s;
+        text-transform: capitalize;
+      }
+    }
+
+    &:hover {
+      border-color: $primary;
+
+      h4 {
+        color: $primary;
       }
     }
   }

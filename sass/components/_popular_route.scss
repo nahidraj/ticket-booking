@@ -42,6 +42,82 @@
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
+    .text {
+      h4 {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.route_tabs {
+  margin-bottom: 14px;
+
+  .nav-link.active {
+    background-color: $primary;
+    color: $white;
+    border-color: $primary
+  }
+
+  .nav-link {
+    @include font(18px, 500);
+    color: $black;
+    border: 1px solid $black;
+    border-radius: 5px;
+    margin: 0 8px;
+  }
+}
+
+.routes_tabs_information{
+  .tab-pane{
+    padding-top: 0;
+  }
+}
+
+
+.top_airlines {
+  padding-top: 80px;
+}
+
+.top_airlines_item {
+  border-radius: 8px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all linear .2s;
+
+  .left_icon {
+    color: $primary;
+  }
+
+  .text {
+    width: 301px;
+
+    h4 {
+      @include font(20px, 600);
+    }
+
+    h5 {
+      margin-top: 5px;
+      @include font(18px, 500);
+
+      small {
+        @include font(15px, 400);
+      }
+    }
+
+  }
+
+  .right_icon {
+    color: $primary;
+    font-size: 14px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
     .text {
       h4 {
         color: $primary;
