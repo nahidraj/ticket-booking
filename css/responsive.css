@@ -77,8 +77,131 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .common_title {
+    font-size: 27px;
+  }
   .banner .search_panel .top_tabs_menu .nav-item {
     width: 50%;
+  }
+  .banner .search_panel .top_tabs_menu .nav-link {
+    text-align: left;
+    padding-left: 30px;
+  }
+  .visa_service_tabs .nav-pills .nav-link {
+    font-size: 17px;
+    padding: 5px 12px;
+  }
+  .popular_destination .big_destination .image .text h3 {
+    font-size: 30px;
+    margin: 4px 0 0px 0;
+  }
+  .popular_destination .big_destination .image .text {
+    padding: 23px;
+  }
+  footer .footer-bg .footer_title {
+    margin-bottom: 10px;
+  }
+  footer .footer-bg .more_information {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .common_title {
+    font-size: 24px;
+  }
+  .banner .search_panel .top_tabs_menu .nav-item {
+    width: 50%;
+  }
+  .banner .search_panel .top_tabs_menu .nav-link {
+    text-align: left;
+    font-size: 14px;
+  }
+  .banner .search_panel .menu_wise_information {
+    padding: 16px;
+    padding-top: 0;
+  }
+  .banner .radio_fields .form-check-label {
+    font-size: 15px;
+  }
+  .banner .main_forms .submit__btn {
+    padding: 7px 30px;
+  }
+  .banner .banner_btm_info .icon {
+    margin-right: 18px;
+  }
+  .banner .banner_btm_info .text h4 {
+    font-size: 19px;
+  }
+  .banner .banner_btm_info .text .input-groups input {
+    width: 172px;
+  }
+  .feature .feature_slider .slider_item .text p {
+    padding-bottom: 4px;
+  }
+  .feature .feature_slider .slider_item .text h4 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .feature {
+    padding-top: 60px;
+  }
+  .destination_item .text h3 {
+    font-size: 22px;
+  }
+  .popular_destination .big_destination .image .text {
+    padding: 10px;
+  }
+  .popular_destination .big_destination .image .text h5 {
+    font-size: 14px;
+  }
+  .popular_destination .big_destination .image .text h3 {
+    font-size: 26px;
+    margin: 4px 0 0px 0;
+  }
+  .popular_destination .big_destination .image .text span {
+    font-size: 15px;
+  }
+  .top_airlines_item .text {
+    width: 216px;
+  }
+  .popular_destination {
+    padding-top: 60px;
+  }
+  .popular_route {
+    padding-top: 60px;
+  }
+  .top_airlines {
+    padding-top: 60px;
+  }
+  .visa_service {
+    padding-top: 60px;
+  }
+  .visa_service_tabs .nav-pills .nav-link {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .sister_concern {
+    padding-top: 60px;
+  }
+  .sister_concern .left {
+    left: 0;
+    z-index: 9;
+  }
+  .sister_concern .right {
+    left: unset;
+    right: 0;
+    z-index: 9;
+  }
+  footer .footer-bg {
+    padding-top: 60px;
+  }
+  footer .footer-bg .more_information {
+    margin-top: 20px;
+  }
+  footer .footer-bg .footer_title {
+    font-size: 21px;
+    margin-bottom: 10px;
   }
 }
 
