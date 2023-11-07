@@ -61,7 +61,7 @@ body {
 }
 
 ::selection {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
 }
 
@@ -160,16 +160,16 @@ nav .navbar-nav .nav-item .navbar_logo {
   margin: 0 50px;
 }
 nav .navbar-nav .nav-item .login_btn {
-  border: 2px solid red;
+  border: 2px solid #F68B1F;
   padding: 8px 50px;
   border-radius: 30px;
   font-size: 20px;
   font-weight: 400;
-  color: red;
+  color: #F68B1F;
   transition: all linear 0.2s;
 }
 nav .navbar-nav .nav-item .login_btn:hover {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
 }
 nav .navbar-nav .nav-item:first-child .nav-link {
@@ -189,7 +189,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 .mobile-topbar .bars i {
   width: 40px;
   height: 40px;
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
   font-size: 20px;
   text-align: center;
@@ -217,9 +217,9 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 .mobile-menu .mobile-topbar .icon i:hover {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
-  border-color: red;
+  border-color: #F68B1F;
 }
 .mobile-menu .mobile-menu-overlay {
   width: 100%;
@@ -253,7 +253,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .mobile-menu .mobile-menu-main .close-m-menu i:hover {
-  background-color: red;
+  background-color: #F68B1F;
 }
 .mobile-menu .mobile-menu-main .menu-body {
   padding: 20px;
@@ -280,7 +280,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 .mobile-menu .mobile-menu-main .menu-body .action ul li sup {
   width: 25px;
   height: 25px;
-  background-color: red;
+  background-color: #F68B1F;
   border-radius: 50%;
   text-align: center;
   line-height: 25px;
@@ -304,7 +304,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .mobile-menu .mobile-menu-main .menu-body .search input:focus {
-  border-color: red;
+  border-color: #F68B1F;
 }
 .mobile-menu .mobile-menu-main .menu-body .search button {
   top: 50%;
@@ -327,7 +327,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .mobile-menu .mobile-menu-main .menu-body .menu-list ul li a:hover {
-  color: red;
+  color: #F68B1F;
 }
 .mobile-menu .mobile-menu-main .menu-body .menu-list ul li a i {
   width: 40px;
@@ -338,7 +338,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .mobile-menu .mobile-menu-main .menu-body .menu-list ul li a:hover i {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
 }
 .mobile-menu .mobile-menu-main .menu-body .menu-list ul li ul {
@@ -440,15 +440,15 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   padding: 12px 36px;
 }
 .banner .search_panel .sub_menu_tabs .nav-link.active {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
 }
 .banner .radio_fields .form-check-input {
   background-color: transparent;
-  border: 2px solid red;
+  border: 2px solid #F68B1F;
 }
 .banner .radio_fields .form-check-input:checked {
-  background-color: red;
+  background-color: #F68B1F;
 }
 .banner .radio_fields .form-check-label {
   font-size: 16px;
@@ -495,7 +495,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   line-height: 45px;
 }
 .banner .main_forms .submit__btn {
-  background-color: red;
+  background-color: #F68B1F;
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
@@ -541,8 +541,8 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 }
 .banner .add_city_layout button {
   background-color: rgba(0, 123, 172, 0.1);
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #F68B1F;
+  color: #F68B1F;
   font-size: 15px;
   font-weight: 500;
   padding: 8px 20px;
@@ -563,7 +563,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 .banner .banner_btm_info .icon i {
   width: 60px;
   height: 60px;
-  background-color: red;
+  background-color: #F68B1F;
   text-align: center;
   line-height: 60px;
   border-radius: 50%;
@@ -576,7 +576,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   margin-bottom: 8px;
 }
 .banner .banner_btm_info .text .more-info {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
@@ -648,7 +648,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   font-size: 0;
   width: 4px;
   height: 4px;
-  background-color: red;
+  background-color: #F68B1F;
   border-radius: 50%;
   border: 0;
   margin-left: 5px;
@@ -785,7 +785,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   margin: 4px 0 8px 0;
 }
 .popular_destination .big_destination .image .text h5 {
-  color: red;
+  color: #F68B1F;
   color: #ffffff;
   font-size: 22px;
 }
@@ -819,7 +819,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   margin: 4px 0 8px 0;
 }
 .destination_item .text h5 {
-  color: red;
+  color: #F68B1F;
 }
 .destination_item .text h5 small {
   font-size: 15px;
@@ -838,7 +838,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .popular_route_item .left_icon {
-  color: red;
+  color: #F68B1F;
 }
 .popular_route_item .text {
   width: 205px;
@@ -857,23 +857,23 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   font-weight: 400;
 }
 .popular_route_item .right_icon {
-  color: red;
+  color: #F68B1F;
   font-size: 14px;
 }
 .popular_route_item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .popular_route_item:hover .text h4 {
-  color: red;
+  color: #F68B1F;
 }
 
 .route_tabs {
   margin-bottom: 14px;
 }
 .route_tabs .nav-link.active {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
-  border-color: red;
+  border-color: #F68B1F;
 }
 .route_tabs .nav-link {
   font-size: 18px;
@@ -901,7 +901,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transition: all linear 0.2s;
 }
 .top_airlines_item .left_icon {
-  color: red;
+  color: #F68B1F;
 }
 .top_airlines_item .text {
   width: 301px;
@@ -920,14 +920,14 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   font-weight: 400;
 }
 .top_airlines_item .right_icon {
-  color: red;
+  color: #F68B1F;
   font-size: 14px;
 }
 .top_airlines_item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .top_airlines_item:hover .text h4 {
-  color: red;
+  color: #F68B1F;
 }
 
 .visa_service {
@@ -935,16 +935,16 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 }
 .visa_service .common_title {
   margin-bottom: 0;
-  color: red;
+  color: #F68B1F;
 }
 
 .visa_service_tabs {
   margin-bottom: 20px;
 }
 .visa_service_tabs .nav-pills .nav-link.active {
-  background-color: red;
+  background-color: #F68B1F;
   color: #ffffff;
-  border-color: red;
+  border-color: #F68B1F;
 }
 .visa_service_tabs .nav-pills .nav-link {
   font-size: 18px;
@@ -956,7 +956,7 @@ nav .navbar-nav .nav-item:first-child .nav-link {
 }
 
 .visa_service_info .visa_service_item {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border-radius: 8px;
   padding: 10px;
   border: 1px solid transparent;
@@ -982,10 +982,10 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   text-transform: capitalize;
 }
 .visa_service_info .visa_service_item:hover {
-  border-color: red;
+  border-color: #F68B1F;
 }
 .visa_service_info .visa_service_item:hover h4 {
-  color: red;
+  color: #F68B1F;
 }
 
 .sister_concern {
@@ -1009,8 +1009,8 @@ nav .navbar-nav .nav-item:first-child .nav-link {
   transform: translateY(-50%);
 }
 .sister_concern .icon:hover {
-  background-color: red;
-  border-color: red;
+  background-color: #F68B1F;
+  border-color: #F68B1F;
   color: #ffffff;
 }
 .sister_concern .left {
@@ -1044,7 +1044,7 @@ footer .footer-bg .links a {
   transition: all linear 0.2s;
 }
 footer .footer-bg .links a:hover {
-  color: red;
+  color: #F68B1F;
 }
 footer .footer-bg .more_information {
   margin-top: 40px;
@@ -1063,7 +1063,7 @@ footer .footer-bg .more_information .address_block h5 {
   margin-bottom: 10px;
 }
 footer .footer-bg .address_block .info li {
-  color: red;
+  color: #F68B1F;
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: 400;
@@ -1072,7 +1072,7 @@ footer .footer-bg .address_block .info li i {
   margin-right: 4px;
 }
 footer .footer-bg .address_block .info a {
-  color: red;
+  color: #F68B1F;
 }
 footer .footer-bg .address_block .social {
   margin-top: 20px;
@@ -1105,12 +1105,12 @@ footer .footer-bg .copyright {
   padding-bottom: 50px;
 }
 footer .footer-bg .copyright p a {
-  color: red;
+  color: #F68B1F;
 }
 
 #button {
   display: inline-block;
-  background-color: red;
+  background-color: #F68B1F;
   width: 40px;
   height: 40px;
   line-height: 40px;
